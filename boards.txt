@@ -73,7 +73,7 @@ minisam_m4.build.variant_system_lib=
 minisam_m4.build.vid=0x1209
 minisam_m4.build.pid=0x2017
 minisam_m4.bootloader.tool=openocd
-minisam_m4.bootloader.file=minisamM4/bootloader-minisam_m4-v2.0.0-adafruit.5.bin
+minisam_m4.bootloader.file=minisamM4/bootloader-mini_sam_m4-v2.0.0-adafruit.5.bin
 minisam_m4.compiler.arm.cmsis.ldflags="-L{build.variant.path}" -larm_cortexM4lf_math -mfloat-abi=hard -mfpu=fpv4-sp-d16
 minisam_m4.menu.cache.on=Enabled
 minisam_m4.menu.cache.on.build.cache_flags=-DENABLE_CACHE
