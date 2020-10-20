@@ -57,8 +57,8 @@ extern "C"
  *----------------------------------------------------------------------------*/
 
 // Number of pins defined in PinDescription array
-#define PINS_COUNT           (33u)
-#define NUM_DIGITAL_PINS     (21u)
+#define PINS_COUNT           (35u)
+#define NUM_DIGITAL_PINS     (22u)
 #define NUM_ANALOG_INPUTS    (7u)
 #define NUM_ANALOG_OUTPUTS   (2u)
 #define analogInputToDigitalPin(p)  ((p < NUM_ANALOG_INPUTS) ? (p) + PIN_A0 : -1)
@@ -81,14 +81,14 @@ extern "C"
 // #define digitalPinToTimer(P)
 
 // LEDs
-#define PIN_LED_13           (8u)
+#define PIN_LED_13           (9u)
 #define PIN_LED              PIN_LED_13
 #define LED_BUILTIN          PIN_LED_13
 
 /*
  * Analog pins
  */
-#define PIN_A0               (9ul)
+#define PIN_A0               (10ul)
 #define PIN_A1               (PIN_A0 + 1)
 #define PIN_A2               (PIN_A0 + 2)
 #define PIN_A3               (PIN_A0 + 3)
@@ -113,6 +113,7 @@ static const uint8_t DAC1 = PIN_DAC1;
 
 // Other pins
 #define PIN_ATN              (21ul)
+#define BUTTON_BUILTIN       (7u)
 static const uint8_t ATN = PIN_ATN;
 
 /*
@@ -130,14 +131,14 @@ static const uint8_t ATN = PIN_ATN;
  */
 #define SPI_INTERFACES_COUNT     1
 
-#define PIN_SPI_MISO         (18u)
-#define PIN_SPI_SCK          (19u)
-#define PIN_SPI_MOSI         (20u)
+#define PIN_SPI_MISO         (20u)
+#define PIN_SPI_SCK          (21u)
+#define PIN_SPI_MOSI         (22u)
 #define PERIPH_SPI           sercom1
 #define PAD_SPI_TX           SPI_PAD_0_SCK_1
 #define PAD_SPI_RX           SERCOM_RX_PAD_3
 
-static const uint8_t SS	  = PIN_A6 ;	
+static const uint8_t SS	  = PIN_A6 ;
 static const uint8_t MOSI = PIN_SPI_MOSI ;
 static const uint8_t MISO = PIN_SPI_MISO ;
 static const uint8_t SCK  = PIN_SPI_SCK ;
@@ -147,8 +148,8 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
  */
 #define WIRE_INTERFACES_COUNT 1
 
-#define PIN_WIRE_SDA         (16u)
-#define PIN_WIRE_SCL         (17u)
+#define PIN_WIRE_SDA         (18u)
+#define PIN_WIRE_SCL         (19u)
 #define PERIPH_WIRE          sercom2
 #define WIRE_IT_HANDLER      SERCOM2_Handler
 
@@ -158,9 +159,9 @@ static const uint8_t SCL = PIN_WIRE_SCL;
 /*
  * USB
  */
-#define PIN_USB_HOST_ENABLE (21ul)
-#define PIN_USB_DM          (22ul)
-#define PIN_USB_DP          (23ul)
+#define PIN_USB_HOST_ENABLE (23ul)
+#define PIN_USB_DM          (24ul)
+#define PIN_USB_DP          (25ul)
 
 /*
  * I2S Interfaces
@@ -171,12 +172,12 @@ static const uint8_t SCL = PIN_WIRE_SCL;
 // no I2S on G19!
 
 //QSPI Pins
-#define PIN_QSPI_SCK	(27u)
-#define PIN_QSPI_CS	    (28u)
-#define PIN_QSPI_IO0	(29u)
-#define PIN_QSPI_IO1	(30u)
-#define PIN_QSPI_IO2	(31u)
-#define PIN_QSPI_IO3	(32u)
+#define PIN_QSPI_SCK	(30u)
+#define PIN_QSPI_CS	  (31u)
+#define PIN_QSPI_IO0	(32u)
+#define PIN_QSPI_IO1	(33u)
+#define PIN_QSPI_IO2	(34u)
+#define PIN_QSPI_IO3	(35u)
 
 
 #if !defined(VARIANT_QSPI_BAUD_DEFAULT)
@@ -231,4 +232,3 @@ extern Uart Serial1;
 #define SERIAL_PORT_HARDWARE_OPEN   Serial1
 
 #endif /* _VARIANT_MERTO_M4_ */
-
